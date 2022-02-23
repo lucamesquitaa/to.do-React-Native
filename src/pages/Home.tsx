@@ -20,7 +20,11 @@ export function Home() {
       title: newTaskTitle,
       done: false
     }
+    if(!tasks){
+      return;
+    }
     setTasks(oldState => [...oldState, list])
+    
   }
 
   function handleToggleTaskDone(id: number) {
